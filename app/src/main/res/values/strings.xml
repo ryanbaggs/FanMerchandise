@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Fan Merchandise</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="temporary_text">Temporary Text</string>
+    <string name="default_web_client_id" translatable="false">webClientId.apps.googleusercontent.com</string>
+</resources>
