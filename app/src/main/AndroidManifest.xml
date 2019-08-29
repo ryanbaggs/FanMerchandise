@@ -3,15 +3,17 @@
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.fastburngames.fanmerchandise">
 
-    <dist:module dist:instant="true" />
-
     <application
         android:allowBackup="true"
+        android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".auth.LoginEmailPassActivity" />
+        <activity android:name=".auth.RegisterActivity" />
+        <activity android:name=".auth.FUIAuthActivity" />
         <activity
             android:name=".FanPageActivity"
             android:parentActivityName=".MainActivity">
@@ -30,5 +32,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <dist:module dist:instant="true" />
 
 </manifest>

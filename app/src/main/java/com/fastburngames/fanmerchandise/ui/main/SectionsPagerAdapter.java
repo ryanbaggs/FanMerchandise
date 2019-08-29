@@ -29,8 +29,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
-        // Return a ArticleRecyclerGridFragment (defined as a static inner class below).
-        return ArticleRecyclerGridFragment.newInstance(position + 1);
+        // Return a ApparelRecyclerGridFragment (defined as a static inner class below).
+        return ApparelRecyclerGridFragment.newInstance(position + 1);
     }
 
     @Nullable

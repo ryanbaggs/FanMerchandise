@@ -1,9 +1,9 @@
 package com.fastburngames.fanmerchandise.model;
 
 /**
- * The Article POJO (Plain Old Java Objects).
+ * The Apparel POJO (Plain Old Java Objects).
  */
-public class Article {
+public class Apparel {
 
     public static final String FEILD_TITLE = "title";
 

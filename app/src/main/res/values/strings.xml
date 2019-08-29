@@ -4,4 +4,5 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="temporary_text">Temporary Text</string>
     <string name="default_web_client_id" translatable="false">webClientId.apps.googleusercontent.com</string>
+    <string name="sign_out_button_text">Sign out</string>
 </resources>

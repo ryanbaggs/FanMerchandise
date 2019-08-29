@@ -13,14 +13,14 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.fastburngames.fanmerchandise.ArticleItemAdapter;
+import com.fastburngames.fanmerchandise.ApparelItemAdapter;
 import com.fastburngames.fanmerchandise.R;
 
 /**
  * The Fragment that contains the RecyclerView displaying the Articles in a
  * GridLayout.
  */
-public class ArticleRecyclerGridFragment extends Fragment {
+public class ApparelRecyclerGridFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
@@ -28,10 +28,10 @@ public class ArticleRecyclerGridFragment extends Fragment {
 
     // Member variables.
     private RecyclerView mRecyclerView;
-    private ArticleItemAdapter mArticleItemAdapter;
+    private ApparelItemAdapter mApparelItemAdapter;
 
-    public static ArticleRecyclerGridFragment newInstance(int index) {
-        ArticleRecyclerGridFragment fragment = new ArticleRecyclerGridFragment();
+    static ApparelRecyclerGridFragment newInstance(int index) {
+        ApparelRecyclerGridFragment fragment = new ApparelRecyclerGridFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_SECTION_NUMBER, index);
         fragment.setArguments(bundle);
@@ -65,7 +65,7 @@ public class ArticleRecyclerGridFragment extends Fragment {
         mRecyclerView.setLayoutManager(new GridLayoutManager(this.getContext(),
                 gridColumnCount));
 
-        // ArticleItemAdapter setup.
+        // ApparelItemAdapter setup.
         initializeAdapter();
 
 
@@ -82,7 +82,7 @@ public class ArticleRecyclerGridFragment extends Fragment {
      * Method initializes adapter and sets it to the RecyclerView.
      */
     private void initializeAdapter() {
-        mArticleItemAdapter = new ArticleItemAdapter(this.getActivity());
-        mRecyclerView.setAdapter(mArticleItemAdapter);
+        mApparelItemAdapter = new ApparelItemAdapter(this.getActivity());
+        mRecyclerView.setAdapter(mApparelItemAdapter);
     }
 }

@@ -9,21 +9,21 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * Class is the Adapter for the RecyclerView, it inflates the Article data
+ * Class is the Adapter for the RecyclerView, it inflates the Apparel data
  * into the RecyclerView.
  */
-public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.ViewHolder> {
+public class ApparelItemAdapter extends RecyclerView.Adapter<ApparelItemAdapter.ViewHolder> {
 
     // Member variables.
     private Context mContext;
 
     /**
-     * Constructor that passes in the Context and the Article data.
-     * TODO: Write comment, enter in Article data.
+     * Constructor that passes in the Context and the Apparel data.
+     * TODO: Write comment, enter in Apparel data.
      *
      * @param context The context of the application.
      */
-    public ArticleItemAdapter(Context context){
+    public ApparelItemAdapter(Context context){
         this.mContext = context;
     }
 
@@ -38,7 +38,7 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
      */
     @NonNull
     @Override
-    public ArticleItemAdapter.ViewHolder onCreateViewHolder
+    public ApparelItemAdapter.ViewHolder onCreateViewHolder
             (@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(mContext)
                 .inflate(R.layout.article_list_item, parent, false));
@@ -63,7 +63,7 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
      */
     @Override
     public int getItemCount() {
-        // TODO: Code return size() of Article list.
+        // TODO: Code return size() of Apparel list.
         return 0;
     }
 
@@ -82,7 +82,7 @@ public class ArticleItemAdapter extends RecyclerView.Adapter<ArticleItemAdapter.
 
         /**
          * TODO: Setup intent for launching DetailActivity based off of
-         *       which Article was selected.
+         *       which Apparel was selected.
          */
         @Override
         public void onClick(View v) {
