@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
 import com.fastburngames.fanmerchandise.BuildConfig;
 import com.fastburngames.fanmerchandise.R;
@@ -25,17 +27,13 @@ public class FUIAuthActivity extends AppCompatActivity {
     // Member Variables.
     FirebaseAuth mAuth;
 
-    // TODO: Create authentication code.
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_fui_auth);
 
         mAuth = FirebaseAuth.getInstance();
-    }
 
-    public void signIn() {
         ActionCodeSettings actionCodeSettings = ActionCodeSettings.newBuilder()
                 .setAndroidPackageName(BuildConfig.APPLICATION_ID, true, null)
                 .setHandleCodeInApp(true)
@@ -74,6 +72,18 @@ public class FUIAuthActivity extends AppCompatActivity {
                 // response.getError().getErrorCode() and handle the error.
                 // TODO: code sign in failure notifications/directions.
             }
+        }
+    }
+
+    public void signUp(View view) {
+        if (mAuth.getCurrentUser() == null){
+            Intent registerIntent = new Intent(FUIAuthActivity.this,
+                    RegisterActivity.class);
+            startActivity(registerIntent);
+        } else {
+            // User already Logged-in.
+            Toast.makeText(this, "Please log out to make an account.",
+                    Toast.LENGTH_LONG).show();
         }
     }
 }

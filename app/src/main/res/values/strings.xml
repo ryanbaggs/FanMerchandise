@@ -3,6 +3,7 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="temporary_text">Temporary Text</string>
-    <string name="default_web_client_id" translatable="false">webClientId.apps.googleusercontent.com</string>
-    <string name="sign_out_button_text">Sign out</string>
+    <string name="sign_up_button_text">Sign Up</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
 </resources>
