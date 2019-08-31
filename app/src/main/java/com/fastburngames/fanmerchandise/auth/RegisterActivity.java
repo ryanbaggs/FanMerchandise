@@ -4,17 +4,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
 import com.fastburngames.fanmerchandise.R;
 
-public class RegisterActivity extends FragmentActivity {
+import java.util.ArrayList;
+import java.util.List;
 
-    // Static variables.
-    private static int NUM_PAGES;
+public class RegisterActivity extends FragmentActivity {
 
     //Member variables.
     private ViewPager mPager;
@@ -24,14 +23,9 @@ public class RegisterActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        // Email and pass, verification, and continue to app.
-        NUM_PAGES = getResources().getInteger(R.integer.register_pages_count);
-
-        // Initialize the ViewPager and PagerAdapter then set the adapter to
-        // the ViewPager.
+        // Initialize and set up the ViewPager.
         mPager = findViewById(R.id.view_pager_register);
-        PagerAdapter mPagerAdapter = new RegisterPagerAdapter(getSupportFragmentManager());
-        mPager.setAdapter(mPagerAdapter);
+        setupViewPager(mPager);
     }
 
     @Override
@@ -45,29 +39,41 @@ public class RegisterActivity extends FragmentActivity {
         }
     }
 
+    private void setupViewPager(ViewPager viewPager){
+        // Initialize the adapter.
+        RegisterPagerAdapter adapter = new RegisterPagerAdapter
+                (getSupportFragmentManager());
+        // Add the fragments.
+        adapter.addFragment(new RegisterEmailPassFragment());
+        viewPager.setAdapter(adapter);
+    }
+
+    // TODO: Create ViewModel object for user account info.
+
     /**
      * Class for the Pager Adapter that returns the fragment associated with
      * the users current step.
      */
     private class RegisterPagerAdapter extends FragmentStatePagerAdapter {
 
+        private final List<Fragment> mFragmentList = new ArrayList<>();
+
         RegisterPagerAdapter(FragmentManager fm) {
             super(fm);
         }
 
+        private void addFragment(Fragment fragment){
+            mFragmentList.add(fragment);
+        }
+
         @Override
         public Fragment getItem(int position) {
-            switch (position) {
-                case 0:
-                    return new RegisterEmailPassFragment();
-                default:
-                    return null;
-            }
+            return mFragmentList.get(position);
         }
 
         @Override
         public int getCount() {
-            return NUM_PAGES;
+            return mFragmentList.size();
         }
     }
 }
