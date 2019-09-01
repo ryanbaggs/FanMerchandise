@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/app_padding"
     tools:context=".auth.RegisterEmailPassFragment">
 
     <Button
         android:id="@+id/button_create_account"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/edit_text_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
@@ -16,7 +17,7 @@
 
     <EditText
         android:id="@+id/edit_text_password"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_text_email"
         android:layout_centerHorizontal="true"
@@ -28,7 +29,7 @@
 
     <EditText
         android:id="@+id/edit_text_email"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"

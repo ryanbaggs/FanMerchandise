@@ -1,18 +1,16 @@
 package com.fastburngames.fanmerchandise.auth;
 
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
 import com.fastburngames.fanmerchandise.R;
+import com.fastburngames.fanmerchandise.adapters.RegisterPagerAdapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * Activity for setting up a new user account. Only holds UI code.
+ */
 public class RegisterActivity extends FragmentActivity {
 
     //Member variables.
@@ -48,32 +46,5 @@ public class RegisterActivity extends FragmentActivity {
         viewPager.setAdapter(adapter);
     }
 
-    // TODO: Create ViewModel object for user account info.
 
-    /**
-     * Class for the Pager Adapter that returns the fragment associated with
-     * the users current step.
-     */
-    private class RegisterPagerAdapter extends FragmentStatePagerAdapter {
-
-        private final List<Fragment> mFragmentList = new ArrayList<>();
-
-        RegisterPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        private void addFragment(Fragment fragment){
-            mFragmentList.add(fragment);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-    }
 }

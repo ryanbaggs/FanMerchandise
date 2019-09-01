@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel;
 /**
  * ViewModel for the User input data to be passed between Fragments.
  */
-public class RegisterViewModel extends ViewModel {
+public class RegisterActivityViewModel extends ViewModel {
 
     private MutableLiveData<CharSequence> email = new MutableLiveData<>();
     private MutableLiveData<CharSequence> password = new MutableLiveData<>();

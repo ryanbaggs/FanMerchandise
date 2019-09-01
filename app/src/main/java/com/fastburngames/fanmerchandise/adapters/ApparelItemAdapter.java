@@ -1,4 +1,4 @@
-package com.fastburngames.fanmerchandise;
+package com.fastburngames.fanmerchandise.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.fastburngames.fanmerchandise.R;
 
 /**
  * Class is the Adapter for the RecyclerView, it inflates the Apparel data
