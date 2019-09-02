@@ -13,6 +13,8 @@ import com.fastburngames.fanmerchandise.adapters.RegisterPagerAdapter;
  */
 public class RegisterActivity extends FragmentActivity {
 
+    // TODO: add the new Fragments.
+
     //Member variables.
     private ViewPager mPager;
 

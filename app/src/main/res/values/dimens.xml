@@ -6,4 +6,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
     <dimen name="app_padding">16dp</dimen>
+    <dimen name="margin_text">24dp</dimen>
+    <dimen name="margin_top_view">48dp</dimen>
 </resources>

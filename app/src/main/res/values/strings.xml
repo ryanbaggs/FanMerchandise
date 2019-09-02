@@ -7,4 +7,10 @@
     <string name="email_hint">Email</string>
     <string name="password_hint">Password</string>
     <string name="create_account_button_text">Create Account</string>
+    <string name="label_street_line_1">Street Line 1:</string>
+    <string name="label_street_line_2">Street Line 2:</string>
+    <string name="label_city">City:</string>
+    <string name="label_state">State:</string>
+    <string name="button_label_back">Back</string>
+    <string name="button_label_next">Next</string>
 </resources>
