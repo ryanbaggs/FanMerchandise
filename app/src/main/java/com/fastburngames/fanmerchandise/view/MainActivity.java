@@ -1,9 +1,10 @@
-package com.fastburngames.fanmerchandise;
+package com.fastburngames.fanmerchandise.view;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.fastburngames.fanmerchandise.auth.FUIAuthActivity;
+import com.fastburngames.fanmerchandise.R;
+import com.fastburngames.fanmerchandise.view.auth.FUIAuthActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
@@ -13,14 +14,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
-import com.fastburngames.fanmerchandise.ui.main.SectionsPagerAdapter;
+import com.fastburngames.fanmerchandise.adapters.SectionsPagerAdapter;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
-    // TODO: Add member list of Apparel objects.
+    // TODO: Add member list of ApparelViewModel objects.
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

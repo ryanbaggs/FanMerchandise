@@ -1,4 +1,4 @@
-package com.fastburngames.fanmerchandise.auth;
+package com.fastburngames.fanmerchandise.view.auth;
 
 import androidx.appcompat.app.AppCompatActivity;
 

@@ -1,4 +1,4 @@
-package com.fastburngames.fanmerchandise.database;
+package com.fastburngames.fanmerchandise.dataModel;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 

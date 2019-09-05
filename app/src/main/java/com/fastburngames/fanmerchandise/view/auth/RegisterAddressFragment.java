@@ -1,4 +1,4 @@
-package com.fastburngames.fanmerchandise.auth;
+package com.fastburngames.fanmerchandise.view.auth;
 
 import android.content.Context;
 import android.net.Uri;

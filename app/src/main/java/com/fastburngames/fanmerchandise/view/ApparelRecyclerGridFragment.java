@@ -1,4 +1,4 @@
-package com.fastburngames.fanmerchandise.ui.main;
+package com.fastburngames.fanmerchandise.view;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fastburngames.fanmerchandise.adapters.ApparelItemAdapter;
 import com.fastburngames.fanmerchandise.R;
+import com.fastburngames.fanmerchandise.viewModel.PageViewModel;
 
 /**
  * The Fragment that contains the RecyclerView displaying the Articles in a
@@ -30,7 +31,7 @@ public class ApparelRecyclerGridFragment extends Fragment {
     private RecyclerView mRecyclerView;
     private ApparelItemAdapter mApparelItemAdapter;
 
-    static ApparelRecyclerGridFragment newInstance(int index) {
+    public static ApparelRecyclerGridFragment newInstance(int index) {
         ApparelRecyclerGridFragment fragment = new ApparelRecyclerGridFragment();
         Bundle bundle = new Bundle();
         bundle.putInt(ARG_SECTION_NUMBER, index);

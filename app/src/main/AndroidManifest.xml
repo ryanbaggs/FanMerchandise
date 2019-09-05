@@ -11,18 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".auth.LoginEmailPassActivity" />
-        <activity android:name=".auth.RegisterActivity" />
-        <activity android:name=".auth.FUIAuthActivity" />
+        <activity android:name=".view.auth.LoginEmailPassActivity" />
+        <activity android:name=".view.auth.RegisterActivity" />
+        <activity android:name=".view.auth.FUIAuthActivity" />
         <activity
-            android:name=".FanPageActivity"
-            android:parentActivityName=".MainActivity">
+            android:name=".view.FanPageActivity"
+            android:parentActivityName=".view.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.fastburngames.fanmerchandise.MainActivity" />
+                android:value="com.fastburngames.fanmerchandise.view.MainActivity" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".view.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

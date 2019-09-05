@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/app_padding"
-    tools:context=".auth.FUIAuthActivity">
+    tools:context=".view.auth.FUIAuthActivity">
 
     <Button
         android:id="@+id/sign_up_button"

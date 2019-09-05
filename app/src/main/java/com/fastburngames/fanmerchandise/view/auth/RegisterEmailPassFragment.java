@@ -1,4 +1,4 @@
-package com.fastburngames.fanmerchandise.auth;
+package com.fastburngames.fanmerchandise.view.auth;
 
 import android.os.Bundle;
 
@@ -15,7 +15,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.fastburngames.fanmerchandise.R;
-import com.fastburngames.fanmerchandise.model.RegisterActivityViewModel;
+import com.fastburngames.fanmerchandise.dataModel.UserData;
+import com.fastburngames.fanmerchandise.viewModel.RegisterActivityViewModel;
 
 import java.util.Objects;
 
@@ -30,6 +31,7 @@ public class RegisterEmailPassFragment extends Fragment {
 
     // Member Variables.
     private RegisterActivityViewModel mViewModel;
+    private UserData userData;
     private EditText mTextEmail;
     private EditText mTextPass;
 
@@ -64,9 +66,7 @@ public class RegisterEmailPassFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "OnClick.");
-                // Pass email and password to the mViewModel object.
-                mViewModel.setEmail(mTextEmail.getText());
-                mViewModel.setPassword(mTextPass.getText());
+                updateUserViewModel();
             }
         });
 
@@ -87,20 +87,36 @@ public class RegisterEmailPassFragment extends Fragment {
                 (Objects.requireNonNull(getActivity()))
                 .get(RegisterActivityViewModel.class);
 
-        // Set up the observers for email and password TextViews.
-        mViewModel.getEmail().observe(getViewLifecycleOwner(),
-                new Observer<CharSequence>() {
+        // Set up the observer.
+        mViewModel.getUserLiveData().observe(getViewLifecycleOwner(),
+                new Observer<UserData>() {
             @Override
-            public void onChanged(CharSequence charSequence) {
-                mTextEmail.setText(charSequence);
+            public void onChanged(UserData userData) {
+                updateUserData(userData);
             }
         });
-        mViewModel.getPassword().observe(getViewLifecycleOwner(),
-                new Observer<CharSequence>() {
-                    @Override
-                    public void onChanged(CharSequence charSequence) {
-                        mTextPass.setText(charSequence);
-                    }
-                });
+
+        // Initialize userData, this is if the user presses the back button.
+        // User expects all of his/her already configured information to be
+        // retained.
+        userData = mViewModel.getUserLiveData().getValue();
+    }
+
+    /**
+     * Method updates the ViewModel with the newly created email and password.
+     */
+    private void updateUserViewModel(){
+        userData.setEmail(mTextEmail.getText());
+        userData.setPassword(mTextPass.getText());
+        mViewModel.setUserLiveData(userData);
+    }
+
+    /**
+     * Method used to display to user changes that have occurred.
+     *
+     * @param userData the UserData object provided by the Observer.
+     */
+    private void updateUserData(UserData userData){
+        this.userData = userData;
     }
 }

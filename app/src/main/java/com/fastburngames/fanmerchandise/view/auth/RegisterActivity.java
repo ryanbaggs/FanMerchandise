@@ -1,4 +1,4 @@
-package com.fastburngames.fanmerchandise.auth;
+package com.fastburngames.fanmerchandise.view.auth;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;

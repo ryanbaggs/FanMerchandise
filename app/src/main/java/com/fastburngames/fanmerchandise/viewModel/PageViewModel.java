@@ -1,4 +1,4 @@
-package com.fastburngames.fanmerchandise.ui.main;
+package com.fastburngames.fanmerchandise.viewModel;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.fastburngames.fanmerchandise.R;
 
 /**
- * Class is the Adapter for the RecyclerView, it inflates the Apparel data
+ * Class is the Adapter for the RecyclerView, it inflates the ApparelViewModel data
  * into the RecyclerView.
  */
 public class ApparelItemAdapter extends RecyclerView.Adapter<ApparelItemAdapter.ViewHolder> {
@@ -20,8 +20,8 @@ public class ApparelItemAdapter extends RecyclerView.Adapter<ApparelItemAdapter.
     private Context mContext;
 
     /**
-     * Constructor that passes in the Context and the Apparel data.
-     * TODO: Write comment, enter in Apparel data.
+     * Constructor that passes in the Context and the ApparelViewModel data.
+     * TODO: Write comment, enter in ApparelViewModel data.
      *
      * @param context The context of the application.
      */
@@ -65,7 +65,7 @@ public class ApparelItemAdapter extends RecyclerView.Adapter<ApparelItemAdapter.
      */
     @Override
     public int getItemCount() {
-        // TODO: Code return size() of Apparel list.
+        // TODO: Code return size() of ApparelViewModel list.
         return 0;
     }
 
@@ -84,7 +84,7 @@ public class ApparelItemAdapter extends RecyclerView.Adapter<ApparelItemAdapter.
 
         /**
          * TODO: Setup intent for launching DetailActivity based off of
-         *       which Apparel was selected.
+         *       which ApparelViewModel was selected.
          */
         @Override
         public void onClick(View v) {

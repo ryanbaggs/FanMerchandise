@@ -1,4 +1,4 @@
-package com.fastburngames.fanmerchandise.ui.main;
+package com.fastburngames.fanmerchandise.adapters;
 
 import android.content.Context;
 
@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.fastburngames.fanmerchandise.R;
+import com.fastburngames.fanmerchandise.view.ApparelRecyclerGridFragment;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
