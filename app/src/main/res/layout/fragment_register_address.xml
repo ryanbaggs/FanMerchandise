@@ -78,6 +78,25 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/margin_text" />
 
+    <TextView
+        android:id="@+id/text_view_zip_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_state"
+        android:layout_marginTop="@dimen/margin_text"
+        android:layout_alignParentStart="true"
+        android:text="@string/label_zip_code"/>
+
+    <EditText
+        android:id="@+id/edit_text_zip_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_zip_code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_text"
+        android:ems="10"
+        android:inputType="number" />
+
     <Button
         android:id="@+id/button_address_back"
         android:layout_width="wrap_content"

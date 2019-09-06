@@ -13,4 +13,5 @@
     <string name="label_state">State:</string>
     <string name="button_label_back">Back</string>
     <string name="button_label_next">Next</string>
+    <string name="label_zip_code">Zip:</string>
 </resources>
